@@ -1,0 +1,17 @@
+.tc{
+	margin:5px;	
+}
+
+.cont{
+	margin-top: 20%;
+	margin-bottom:2%;
+}
+.not{
+	font-size: 30px;
+}
+
+@media(max-width: 631px){
+	.not{
+		font-size: 15px;
+	}
+}

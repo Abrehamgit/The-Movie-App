@@ -4,7 +4,7 @@ import SearchBox from '../components/Search/SearchBox';
 import {Consumer} from '../context/MyProvider';
 import {SearchList} from '../components/Search/SearchList';
 import Header from '../components/Layouts/Header';
-
+import Footer from '../components/Layouts/Footer';
 class Home extends Component {
 	render(){
 		return(	
@@ -37,6 +37,10 @@ class Home extends Component {
 					}}
 
 				</Consumer>
+				<div>
+					<Footer />
+				</div>
+				
 			</div>
 		)
 

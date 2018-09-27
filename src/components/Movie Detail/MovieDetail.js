@@ -5,6 +5,7 @@ import DetailCard from './DetailCard';
 import {ApiKey} from '../../config';
 import Cast from './Cast';
 import {Fa} from 'mdbreact';
+import Footer from '../Layouts/Footer';
 
 class MovieDetail extends Component{
 
@@ -51,7 +52,7 @@ class MovieDetail extends Component{
 			   		   			  />
 			   		 <Cast />
 			   </div>			  
-               
+               <div> <Footer /> </div>
 		    </div>
 	     )
         }
