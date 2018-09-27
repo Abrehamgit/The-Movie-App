@@ -1,0 +1,16 @@
+.movie-list-container{
+	width: 900px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	justify-content: space-around;	
+	align-content: space-between;
+}
+.tc{
+	margin-top: 80px;
+	margin-bottom: 50px;
+	font-weight: 800;
+	letter-spacing: 3px;
+	font-variant: small-caps;
+	font-family: helvetica;
+}

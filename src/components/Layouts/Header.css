@@ -1,0 +1,10 @@
+.header{
+	text-decoration: none;
+	font-family: helvetica;
+	letter-spacing: 3px;
+	font-variant: small-caps;
+	font-weight: 900;
+	font-size: 4rem;
+	text-align: center;
+	margin-top: 5rem
+}

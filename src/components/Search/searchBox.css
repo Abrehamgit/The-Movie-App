@@ -1,0 +1,13 @@
+.input {
+	color: white !important;
+	font-size: 20px !important;
+	font-family: helvetica !important;
+	width: 300px !important;
+}
+
+@media(max-width: 450px){
+	.input{
+		width:200px !important;
+	}
+}
+
