@@ -1,0 +1,66 @@
+
+.caption {
+    -webkit-backface-visibility: hidden; /* prevent flash when embedding fiddle */
+	display: inline-block;
+	position: relative;
+	margin: 25px;
+	overflow: hidden;
+	background: #000;
+}
+
+.caption img {
+	display: block;
+	max-width: 100%;
+	-webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.caption:hover img {
+	opacity: 0.5;
+}
+
+.caption::after,
+.caption::before {
+	position: absolute;
+	width: 100%;
+	height: 50%;
+	text-overflow: clip;	
+	color: #fff;
+    z-index: 1;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out; 
+	-moz-transition: -moz-transform 0.3s ease-in-out; 
+	transition: transform 0.3s ease-in-out; 
+}
+
+.caption::after {
+	content: attr(title);
+	top: 0;	
+	font-size: 30px;
+	font-weight: 300;
+	padding: 25px;
+	padding-bottom: 15px;
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+
+.caption::before {
+	content:attr(overview);
+	overflow: hidden;
+	top: 50%;
+	background: rgba(6,32,53,0.8);
+	font-size: 16px;
+	padding: 20px;
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+.caption:hover::after,
+.caption:hover::before {
+
+	-webkit-transform: translateX(0%);
+	-moz-transform: translateX(0%);
+	transform: translateX(0%);
+}
