@@ -9,7 +9,7 @@ const Cast = props => {
 		);
 	} else {
 		return (
-			<div className="d-flex flex-row justify-content-center cast-container">
+			<div className="d-flex flex-row justify-content-center cast-container flex-wrap">
 				{props.cast.map(actor => (
 					<div>
 						<a

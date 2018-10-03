@@ -75,3 +75,15 @@ span{
 	margin-top: 150px;
 	color: rgba(255,255,255,0.7);
 }
+@media(max-width: 460px){
+	.castImg{
+		width: 90px;
+		height:90px;
+     }
+     .d-img{
+		width:240px;
+		height: 340px;
+		margin-top: 33px;
+		margin-bottom: 20px;
+}
+}
