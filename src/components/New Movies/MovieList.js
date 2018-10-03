@@ -24,6 +24,7 @@ const MovieList = () => (
                 path={movie.poster_path}
                 overview={movie.overview}
                 Id={movie.id}
+                key={movie.id}
               />
             ));
           }

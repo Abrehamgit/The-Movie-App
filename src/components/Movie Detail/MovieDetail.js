@@ -25,21 +25,29 @@ class MovieDetail extends Component {
 				`https://api.themoviedb.org/3/movie/${Id}?api_key=${ApiKey}&language=en-US&append_to_response=credits`
 			)
 			.then(response => {
-				console.log(response.data);
 				this.setState({
 					movie: response.data,
 					genres: response.data.genres.map(item => item.name),
 					cast: response.data.credits.cast.slice(0, 4)
 				});
-				console.log(this.state.genres);
 			});
 	}
 
 	render() {
 		const { movie } = this.state;
-		console.log(this.state.genres);
-		if (movie == {}) {
-			return <Fa icon="spinner" spin />;
+
+		if (!this.state.movie.title) {
+			return (
+				<div
+					className="spinner-container
+								d-flex 
+				               justify-content-center
+				               align-items-center
+				                 "
+				>
+					<Fa icon="spinner" spin size="4x" />
+				</div>
+			);
 		} else {
 			return (
 				<div>
@@ -56,10 +64,14 @@ class MovieDetail extends Component {
 					<div className="detail-container">
 						<div className="d-img">
 							<img
-								src={`https://fmovies.cc/wp-content/uploads/2018/09/${
+								src={`https://image.tmdb.org/t/p/w200/${
 									movie.poster_path
 								}`}
 								className="rounded "
+								alt="movie"
+								placeholder={
+									"http://via.placeholder.com/300x300"
+								}
 							/>
 						</div>
 						<DetailCard

@@ -6,6 +6,7 @@
 	margin: 25px;
 	overflow: hidden;
 	background: #000;
+	border-radius: 3%;
 }
 
 .caption img {
@@ -43,6 +44,7 @@
 	-webkit-transform: translateY(-100%);
 	-moz-transform: translateY(-100%);
 	transform: translateY(-100%);
+	border-radius: 3%;
 }
 
 .caption::before {

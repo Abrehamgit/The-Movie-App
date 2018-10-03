@@ -68,3 +68,10 @@ span{
 	margin-top: 100px;
 	margin-bottom:100px;
 }
+.spinner-container{
+	height: 100vh;
+}
+.sorry{
+	margin-top: 150px;
+	color: rgba(255,255,255,0.7);
+}

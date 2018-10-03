@@ -21,7 +21,7 @@ class Home extends Component {
 									<MovieList />
 								</div>
 							);
-						} else if (!!context.searchAll) {
+						} else  {
 							return (
 								<div>
 									<SearchList />

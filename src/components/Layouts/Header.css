@@ -9,8 +9,30 @@
 	margin-top: 5rem
 }
 .footerr{
+	margin-top: 100px;
 	margin-bottom: 50px;
+	border-top: 2px solid rgba(255,255,255,.4);
+	margin-right: 5px;
+	margin-left: 5px;
 }
-a:hover {
-	text-decoration: underline;
+.links{
+	color: rgba(35,209,209,1);
+}
+.links:hover{
+	color:rgba(124,233,233,1);
+}
+
+.footer-icons{
+	color: rgba(35,209,209,0.3);
+	margin-left: 3px;
+
+}
+.footer-icons:hover{
+	color: rgba(35,209,209,1);
+}
+.twitter-block{
+	margin-bottom: 5px;
+}
+.gitIcon:hover{
+	color:rgba(168,167,159,1);
 }

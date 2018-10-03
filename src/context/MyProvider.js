@@ -13,29 +13,27 @@ export class MyProvider extends Component {
     searchAll: ""
   };
 
-  searchAhandle = event => {
-    event.preventDefault();
-    const value = event.target.value.toLowerCase().trim();
-    this.setState({ searchAll: value });
-    this.getResult(this.state.searchAll);
-  };
-
-  getResult = input => {
-    console.log(input);
-    fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${ApiKey}&language=en-US&query=${input}&page=1&include_adult=true`
-    )
-      .then(reslt => reslt.json())
-      .then(response => {
-        this.setState({ SearchedMovies: response.results });
-        console.log(this.state.SearchedMovies);
-      });
-  };
-
   searchLhandle = event => {
     event.preventDefault();
     const value = event.target.value.toLowerCase().trim();
     this.setState({ searchLatest: value });
+  };
+  searchAhandle = event => {
+    const input = event.target.value.toLowerCase().trim();
+    this.setState({ searchAll: input });
+    axios
+      .get(
+        `https://api.themoviedb.org/3/search/movie?api_key=${ApiKey}&language=en-US&query=${input}&page=1&include_adult=true`
+      )
+      .then(response => {
+        this.setState({
+          SearchedMovies: response.data.results
+        });
+      });
+  };
+
+  clearSearch = event => {
+    this.setState({ searchAll: "" });
   };
   componentDidMount() {
     let todayDate = new Date();
@@ -65,7 +63,6 @@ export class MyProvider extends Component {
       )
       .then(response => {
         this.setState({ MoviesInfo: response.data.results });
-        console.log(this.state.MoviesInfo);
       })
 
       .catch(error => console.log("fetching", error));
@@ -80,10 +77,11 @@ export class MyProvider extends Component {
         value={{
           MoviesInfo: filteredMoviesInfo,
           searchLhandle: this.searchLhandle,
+          searchLatest: this.state.searchLatest,
           searchAhandle: this.searchAhandle,
           searchAll: this.state.searchAll,
-          searchLatest: this.state.searchLatest,
-          SearchedMovies: this.state.SearchedMovies
+          SearchedMovies: this.state.SearchedMovies,
+          clearSearch: this.clearSearch
         }}
       >
         {this.props.children}

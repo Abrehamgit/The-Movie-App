@@ -1,5 +1,4 @@
 import React from "react";
-import { Card } from "mdbreact";
 import "./MovieDetail.css";
 
 const DetialCard = ({ overview, release_date, title, genre, rating }) => (
@@ -30,8 +29,7 @@ const DetialCard = ({ overview, release_date, title, genre, rating }) => (
 		</div>
 		<div className="small-card">
 			<h5>
-				{" "}
-				<span>Genres : </span> {genre}{" "}
+				<span>Genre : </span> {genre}
 			</h5>
 		</div>
 	</div>
